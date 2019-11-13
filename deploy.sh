@@ -1,5 +1,5 @@
 shopt -s extglob
-rm -rf !(build|node_modules|deploy.sh)
+rm -rf !(src|build|node_modules|deploy.sh)
 mv build/* .
 rm -rf build/
 git checkout master
