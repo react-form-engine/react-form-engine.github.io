@@ -1,9 +1,7 @@
-git checkout master
-git merge development
-shopt -s extglob
-rm -rf !(src|build|node_modules|deploy.sh)
-mv build/* .
-rm -rf build/
+cd build/
+rm -rf .git/
+git init
 git add .
 git commit -m '(auto)publish'
-git push
+git remote add origin git@github.com:react-form-engine/react-form-engine.github.io.git
+git push -u origin master --force
